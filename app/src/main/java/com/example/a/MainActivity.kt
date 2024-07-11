@@ -34,7 +34,7 @@ class MainActivity : AppCompatActivity() {
             val peso = editPeso.text.toString()
             val altura = editAltura.text.toString()
 
-            if (peso.isEmpty() || altura.isEmpty()) {
+            if (peso.isNotEmpty() && altura.isNotEmpty()) {
                 intent.putExtra("peso", peso.toDouble() )
                 intent.putExtra("altura", altura.toDouble() )
             }
